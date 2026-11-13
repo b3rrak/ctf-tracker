@@ -1,16 +1,39 @@
-# React + Vite
+# 🛡️ CTF & Zafiyet Takip Panosu (Vulnerability & CTF Tracker)
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Siber güvenlik çalışmaları, CTF (Capture The Flag) makine çözümleri ve sızma testi bulgularını organize etmek amacıyla geliştirilmiş, Kanban tabanlı web uygulamasıdır.
 
-Currently, two official plugins are available:
+## 📸 Ekran Görüntüsü
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+![Uygulama Ekran Görüntüsü](./screenshot.png)
 
-## React Compiler
+## 🚀 Özellikler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **3 Aşamalı Kanban Takibi:** Bulguları *Keşif*, *Analiz Ediliyor* ve *Çözüldü* aşamaları arasında tek tıkla taşıma.
+- **Kritiklik Seviyesi:** *Düşük*, *Orta*, *Yüksek* ve *Kritik* seviyelerine göre renk kodlu risk rozetleri.
+- **Canlı İstatistik Özeti:** Toplam kayıt, yüksek/kritik bulgu sayısı ve çözülen hedef sayısının anlık takibi.
+- **Anlık Arama & Filtreleme:** Hedef makine adına veya zafiyet türüne (SQLi, XSS, IDOR vb.) göre hızlı filtreleme.
+- **Kalıcı Yerel Depolama (`LocalStorage`):** Sayfa yenilense veya tarayıcı kapatılsa dahi verilerin tarayıcı hafızasında saklanması.
 
-## Expanding the Oxlint configuration
+## 🛠️ Kullanılan Teknolojiler
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- **Frontend:** React (Vite)
+- **Stil & Tasarım:** Tailwind CSS (Özel Koyu Pastel Mor Tema)
+- **İkon Seti:** Lucide React
+- **Veri Saklama:** Web Storage API (`LocalStorage`)
+- **Yayınlama (Deploy):** Netlify
+
+## 🤖 Yapay Zeka Kullanım Süreci
+
+Bu projenin geliştirme sürecinde **Gemini** yapay zeka asistanından aktif olarak yararlanılmıştır:
+1. **Planlama ve Veri Modeli:** Siber güvenlik odaklı Kanban mimarisi ve kart veri modeli planlanmıştır.
+2. **Bileşen ve Arayüz Geliştirme:** React state yönetimi (`useState`, `useEffect`), `LocalStorage` senkronizasyonu ve özel pastel mor renk paletiyle Tailwind CSS bileşenleri kodlanmıştır.
+3. **Hata Ayıklama:** Geliştirme ortamı kurulumundaki PowerShell `ExecutionPolicy` ve Vite yapılandırma sorunları çözülmüştür.
+4. **Dokümantasyon:** Kurulum ve proje detaylarını içeren `README.md` dokümanı oluşturulmuştur.
+
+## 💻 Kurulum ve Yerelde Çalıştırma
+
+```bash
+git clone [https://github.com/b3rrak/ctf-tracker.git](https://github.com/b3rrak/ctf-tracker.git)
+cd ctf-tracker
+npm install
+npm run dev
